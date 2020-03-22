@@ -15,6 +15,7 @@
 }
 body {
     font-family: 'Lora', serif;
+    background: url('images/triangle-mosaic.png');
 }
 .wrapper{
     display: flex;
@@ -57,7 +58,7 @@ body {
 }
 .section-head{
     color: var(--TextBlue);
-    font-size: 2.3rem;
+    font-size: 1.8rem;
 
 }
 .section-article{
@@ -73,4 +74,8 @@ body {
 }
 .list-item{
     margin-top: 2vh;
+}
+.code-section{
+    margin-top: 4vh;
+    margin-bottom: 2vh;
 }
