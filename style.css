@@ -1,0 +1,76 @@
+
+/* StyleSheet for JS Documentation 
+@author : Anandhakrishnan M
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --TextBlue: rgb(4, 158, 247);
+    --blue: rgb(9, 58, 87);
+    --white: rgb(247, 247, 247);
+    --black: rgb(29, 28, 28,0.8);  
+}
+body {
+    font-family: 'Lora', serif;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+
+}
+#navbar {
+    background-color: var(--blue);
+    width: 25vw;
+    height: 100vh;
+   position: fixed;
+}
+#navbar li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1vw;
+}
+#navbar li a:hover {
+    background-color: var(--black);
+}
+#navbar li{
+    margin-top: 3vh;
+    margin-left: 2vw;
+    list-style: none;
+}
+#nav-head{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2vw;
+    background-color: var(--black);
+    color: var(--TextBlue);
+}
+#main-doc{
+    width: 60vw;
+    margin-left: 30vw;
+    text-align: justify;
+    margin-top: 18vh;
+    position: absolute;
+}
+.section-head{
+    color: var(--TextBlue);
+    font-size: 2.3rem;
+
+}
+.section-article{
+    margin-top: 2vh;
+    font-size: 1.1rem;
+}
+.para{
+    margin-top: 2vh;
+}
+.list{
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+.list-item{
+    margin-top: 2vh;
+}
