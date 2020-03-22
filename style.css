@@ -9,6 +9,7 @@
 }
 :root {
     --TextBlue: rgb(4, 158, 247);
+    --deepBlue: rgb(26, 101, 145);
     --blue: rgb(9, 58, 87);
     --white: rgb(247, 247, 247);
     --black: rgb(29, 28, 28,0.8);  
@@ -57,7 +58,7 @@ body {
     position: absolute;
 }
 .section-head{
-    color: var(--TextBlue);
+    color: var(--deepBlue);
     font-size: 1.8rem;
     margin-top: 6vh;
 

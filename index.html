@@ -228,7 +228,7 @@
             </section>
             <!--Section: Variable scope-->
             <section class="main-section" id="Variable-scope">
-                <hearder class="section-head">Variable scope</hearder>
+                <header class="section-head">Variable scope</header>
                 <article class="section-article">
                     <p class="para">
                         When you declare a variable outside of any function, it is called a
@@ -262,6 +262,346 @@
                         </code>
                       
                     </div>
+                </article>
+            </section>
+            <!--Section: Global variables-->
+            <section class="main-section" id="Global-variables">
+                <header class="section-head">Global variables</header>
+                <article class="section-article">
+                    <p class="para">
+                        Global variables are in fact properties of the global object. In web
+                        pages the global object is window, so you can set and access global
+                        variables using the window.variable syntax.
+                    </p>
+                    <p class="para">
+                        Consequently, you can access global variables declared in one window or
+                        frame from another window or frame by specifying the window or frame
+                         name. For example, if a variable called phoneNumber is declared in a
+                         document, you can refer to this variable from an iframe as
+                         parent.phoneNumber.
+                    </p>
+                </article>
+            </section>
+            <!--Section: Constants-->
+            <section class="main-section" id="Constants">
+                <header class="section-head">Constants</header>
+                <article class="section-article">
+                    <p class="para">
+                        You can create a read-only, named constant with the const keyword. The
+                        syntax of a constant identifier is the same as for a variable
+                        identifier: it must start with a letter, underscore or dollar sign and
+                        can contain alphabetic, numeric, or underscore characters.
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            const PI = 3.14;
+                        </code>
+                      
+                    </div>
+                    <p class="para">
+                        A constant cannot change value through assignment or be re-declared
+                        while the script is running. It has to be initialized to a value.
+                    </p>
+                    <p class="para">
+                        The scope rules for constants are the same as those for let block scope
+                        variables. If the const keyword is omitted, the identifier is assumed to
+                        represent a variable.
+                    </p>
+                    <p class="para">
+                        You cannot declare a constant with the same name as a function or
+                        variable in the same scope. For example:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            // THIS WILL CAUSE AN ERROR <br/>
+                            function f() {};<br/>
+                             const f = 5; <br/>
+                             // THIS WILLCAUSE AN ERROR ALSO <br/>
+                             function f()
+                             <br/> { <br/>
+                            const g = 5; <br/>
+                            var g;
+                            //statements
+                            <br/>
+                            }
+                        </code>
+                      
+                    </div>
+                    <p class="para">
+                        However, object attributes are not protected, so the following statement
+                        is executed without problems.
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            const MY_OBJECT = {"key": "value"}; <br/>
+                            MY_OBJECT.key = "otherValue";
+                        </code>
+                      
+                    </div>
+                </article>
+            </section>
+            <!--Section: Data types-->
+            <section class="main-section" id="Data-types">
+                <header class="section-head">Data types</header>
+                <article class="section-article">
+                    <p class="para">
+                        The latest ECMAScript standard defines seven data types:
+                        <ul class="list">
+                            <li class="list-item">
+                                <p class="para">Six data types that are primitives:</p>
+                                <ul class="list">
+                                    <li class="list-item">Boolean. true and false.</li>
+                                    <li class="list-item">
+                                        null. A special keyword denoting a null value. 
+                                        Because JavaScript
+                                        is case-sensitive, null is not the same as Null, 
+                                        NULL, or any
+                                        other variant.
+                                    </li>
+                                    <li class="list-item">undefined. A top-level property 
+                                        whose value is undefined.</li>
+                                    <li class="list-item">Number. 42 or 3.14159.</li>
+                                    <li class="list-item">String. "Howdy"</li>
+                                    <li class="list-item">Symbol (new in ECMAScript 2015).
+                                         A data type whose instances are
+                                        unique and immutable.</li>
+                                </ul>
+                            </li>
+                            <li class="list-item">and Object</li>
+                            <p class="para">
+                                Although these data types are a relatively small amount, they enable you
+                                to perform useful functions with your applications. Objects and functions
+                                are the other fundamental elements in the language. You can think of
+                                 objects as named containers for values, and functions as procedures that
+                                 your application can perform.
+                            </p>
+                        </ul>
+                    </p>
+                </article>
+            </section>
+            <!--Section: if...else statement-->
+            <section class="main-section" id="if-else">
+                <header class="section-head">if...else statement</header>
+                <article class="section-article">
+                    <p class="para">
+                        Use the if statement to execute a statement if a logical condition is
+                        true. Use the optional else clause to execute a statement if the condition
+                        is false. An if statement looks as follows:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            if (condition) <br> 
+                            { <br>
+                            statement_1; <br>
+                             } <br>
+                             else <br>
+                              { <br>
+                             statement_2; <br>
+                             }
+                        </code>
+                      
+                    </div>
+                    <p class="para">
+                        condition can be any expression that evaluates to true or false. See
+                        Boolean for an explanation of what evaluates to true and false. If
+                        condition evaluates to true, statement_1 is executed; otherwise,
+                        statement_2 is executed. statement_1 and statement_2 can be any statement,
+                        including further nested if statements.
+                    </p>
+                    <p class="para">
+                        You may also compound the statements using else if to have multiple
+                        conditions tested in sequence, as follows:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            if (condition_1)<br/>
+                             { <br/>
+                                statement_1;<br>
+                             } 
+                             <br> else if (condition_2) <br>
+                              { <br>
+                                 statement_2; <br>
+
+                            } 
+                            <br> else if (condition_n) <br>
+                             { <br>
+                                 statement_n; <br>
+                                 } <br>
+                                  else <br> 
+                                  { <br>
+                                     statement_last; <br>
+                                     }
+                        </code> 
+                      
+                    </div>
+                    <p class="para">
+                        In the case of multiple conditions only the first logical condition which
+                        evaluates to true will be executed. To execute multiple statements, group
+                        them within a block statement ({ ... }) . In general, it's good practice
+                        to always use block statements, especially when nesting if statements:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            if (condition) <br>
+                             { <br>
+                                 statement_1_runs_if_condition_is_true; <br>
+                                statement_2_runs_if_condition_is_true; <br>
+                             } <br>
+                             else <br>
+                             { <br>
+                                statement_3_runs_if_condition_is_false; <br>
+                                statement_4_runs_if_condition_is_false; 
+                            <br>}
+                        </code>
+                      
+                    </div>
+                    <p class="para">
+                        It is advisable to not use simple assignments in a conditional expression,
+                        because the assignment can be confused with equality when glancing over
+                        the code. For example, do not use the following code:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            if (x = y) <br>
+                             { <br>
+                                 /* statements here */ <br>
+                                 }
+                        </code>
+                      
+                    </div>
+                    <p class="para">
+                        If you need to use an
+                        assignment in a conditional expression, a common practice is to put
+                        additional parentheses around the assignment. For example:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            if ((x = y)) <br>
+                             { <br>
+                                 /* statements here */ <br>
+                                 }
+                        </code>
+                      
+                    </div>
+                </article>
+            </section>
+            <!--Section: while statement-->
+            <section class="main-section" id="while-st">
+                <header class="section-head">while statement</header>
+                <article class="section-article">
+                    <p class="para">
+                        A while statement executes its statements as long as a specified condition
+                        evaluates to true. A while statement looks as follows:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            while (condition) statement
+                        </code>
+                      
+                    </div>
+                    <p class="para">
+                        If the condition becomes false,
+                        statement within the loop stops executing and control passes to the
+                        statement following the loop.
+                    </p>
+                    <p class="para">
+                        The condition test occurs before statement in the loop is executed. If
+                        the condition returns true, statement is executed and the condition is
+                        tested again. If the condition returns false, execution stops and
+                        control is passed to the statement following while.
+                    </p>
+                    <p class="para">
+                        To execute multiple statements, use a block statement ({ ... }) to group
+                        those statements.
+                    </p>
+                    <p class="para">Example:</p>
+                    <p class="para">
+                        The following while loop iterates as long as n is less than three:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            var n = 0; <br>
+                             var x = 0; <br>
+                             while (n &lt; 3) <br>
+                              { <br>
+                                 n++; <br>
+                                 x += n; <br>
+                                <br>
+                              }
+                        </code>
+                    </div>
+                    <p class="para">
+                        With each iteration, the loop increments n and adds that value to x.
+                        Therefore, x and n take on the following values:
+                    </p>
+                    <ul class="list">
+                        <li class="list-item">After the first pass: n = 1 and x = 1</li>
+                        <li class="list-item">After the second pass: n = 2 and x = 3</li>
+                        <li class="list-item">After the third pass: n = 3 and x = 6</li>
+                    </ul>
+                    <p class="para">
+                        After completing the third pass, the condition n &lt; 3 is no longer
+                        true, so the loop terminates.
+                    </p>
+                </article>
+            </section>
+            <!--Section: Function declarations-->
+            <section class="main-section" id="Function">
+                <header class="section-head">Function declarations</header>
+                <article class="section-article">
+                    <p class="para">
+                        A function definition (also called a function declaration, or function
+                        statement) consists of the function keyword, followed by:
+                    </p>
+                    <ul class="list">
+                        <li class="list-item">The name of the function.</li>
+                        <li class="list-item"> A list of arguments to the function, 
+                            enclosed in parentheses and
+                            separated by commas.</li>
+                        <li class="list-item"> The JavaScript statements that define the function,
+                             enclosed in curly
+                            brackets, { }.</li>
+                    </ul>
+                    <p class="para">
+                        For example, the following code defines a simple function named square:
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            function square(number) <br>
+                             { <br>
+                                 return number * number; <br>
+                                 }
+                        </code>
+                    </div>
+                    <p class="para">
+                        The function square takes one argument, called number. The function
+                        consists of one statement that says to return the argument of the
+                        function (that is, number) multiplied by itself. The return statement
+                        specifies the value returned by the function.
+                    </p>
+                    <div class="code-section">
+                        <code>
+                            return number * number;
+                        </code>
+                    </div>
+                    <p class="para">
+                        Primitive parameters (such as a number) are passed to functions by
+                        value; the value is passed to the function, but if the function changes
+                        the value of the parameter, this change is not reflected globally or in
+                        the calling function.
+                    </p>
+
+                </article>
+            </section>
+            <!--Section: Reference-->
+            <section class="main-section" id="Reference">
+                <header class="section-head">Reference</header>
+                <article class="section-article">
+                    <p class="para">
+                        All the documentation in this page is taken from
+                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                     target="_blank"> MDN </a>
+                    </p>
                 </article>
             </section>
         </main>
