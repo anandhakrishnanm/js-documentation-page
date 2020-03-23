@@ -112,6 +112,7 @@ body {
      width: 100vw;
      height: 10vh;
      text-align: left;
+     padding-top: 1vh;
 
     }
     #main-doc{
@@ -124,8 +125,9 @@ body {
         top: 2vh;
         right: 3vw;
     }
-    .links li a{
-        margin-left: 10vh;
+    .links li {
+        margin-left: 0vh;
+        text-align: center;
     }
     .links{
         position: absolute;
