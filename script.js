@@ -17,7 +17,7 @@ const showMenu = () => {
 }
 links.forEach(item => {
     item.addEventListener('click', () => {
-        if(screen.width < "600px"){
+        if(screen.width < 500){
             navbar.style.height = '10vh';
             mode=1;
         }
