@@ -7,7 +7,7 @@ document.body.clientWidth;
 const showMenu = () => {
      burger.addEventListener('click', () => {
          if(mode==1){
-            navbar.style.height = '100vh';
+            navbar.style.height = '100%';
             mode=0;
          }
          else{
