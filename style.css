@@ -105,7 +105,7 @@ body {
         width: 100vw;
         z-index: 1;
         height: 10vh;
-        overflow-x: hidden;
+        overflow: hidden;
     }
     #nav-head{
      position: absolute;
@@ -133,7 +133,8 @@ body {
         position: absolute;
         top: 10vh;
         background-color: var(--blue);
-        overflow-y: scroll;
+        overflow-y: hidden;
+        height: 100%;
 
     }
    
