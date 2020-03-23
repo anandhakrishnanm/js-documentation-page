@@ -13,7 +13,8 @@
     --blue: rgb(9, 58, 87);
     --white: rgb(247, 247, 247);
     --black: rgb(29, 28, 28,0.5); 
-    --shade: rgb(114, 112, 112,0.2); 
+    --shade: rgb(114, 112, 112,0.2);
+    --hoverBlue: rgb(12, 83, 141); 
 }
 body {
     font-family: 'Lora', serif;
@@ -39,20 +40,20 @@ body {
     color: var(--white);
     text-decoration: none;
     font-size: 1.1rem;
-    padding: 1vw;
+    margin-left: 1vw;
 }
-#navbar li a:hover {
-    background-color: var(--black);
+#navbar li:hover {
+    background-color: var(--hoverBlue);
     border-radius: 5px;
 }
 #favicon{
     display: none;
 }
 #navbar li{
-    margin-top: 3vh;
+    margin-top: 1vh;
     width: 100%;
-    margin-left: 2vw;
     list-style: none;
+    padding: 1vw;
 }
 #navbar ul{
     width: 100%;
