@@ -17,9 +17,13 @@ const showMenu = () => {
 }
 links.forEach(item => {
     item.addEventListener('click', () => {
-        navbar.style.height = '10vh';
-        mode=1;
+        if(screen.width < "600px"){
+            navbar.style.height = '10vh';
+            mode=1;
+        }
     });
-});
+        
+    });
+
 
 showMenu();
