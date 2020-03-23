@@ -71,6 +71,7 @@ body {
     text-align: justify;
     margin-top: 18vh;
     position: absolute;
+    padding-bottom: 10vh;
 }
 .section-head{
     color: var(--deepBlue);
@@ -107,6 +108,9 @@ body {
         height: 10vh;
         overflow: hidden;
     }
+    body{
+        overflow-x: hidden;
+    }
     #nav-head{
      position: absolute;
      width: 100vw;
@@ -116,14 +120,15 @@ body {
 
     }
     #main-doc{
-        width: 75vw;
-        margin-left: 10vw;
+        width: 85vw;
+        margin-left: 6vw;
+
     }
     .burger{
         display: block;
         position: absolute;
         top: 3vh;
-        right: 3vw;
+        right: 5vw;
     }
     .links li {
         margin-left: 0vh;
