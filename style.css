@@ -12,34 +12,44 @@
     --deepBlue: rgb(26, 101, 145);
     --blue: rgb(9, 58, 87);
     --white: rgb(247, 247, 247);
-    --black: rgb(29, 28, 28,0.8);  
+    --black: rgb(29, 28, 28,0.5); 
+    --shade: rgb(114, 112, 112,0.2); 
 }
 body {
     font-family: 'Lora', serif;
     background: url('images/triangle-mosaic.png');
 }
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-
-}
+.line{
+    width: 40px;
+    height: 8px;
+    margin-top: 4px;
+    background-color: var(--white);
+    }
+.burger{
+       display: none;
+    }
 #navbar {
-    background-color: var(--blue);
     width: 25vw;
     height: 100vh;
+   overflow-y: scroll;
    position: fixed;
+   background-color: var(--blue);
 }
 #navbar li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 1vw;
 }
 #navbar li a:hover {
     background-color: var(--black);
+    border-radius: 5px;
+}
+#favicon{
+    display: none;
 }
 #navbar li{
-    margin-top: 2vh;
+    margin-top: 3vh;
     margin-left: 2vw;
     list-style: none;
 }
@@ -52,7 +62,7 @@ body {
 }
 #main-doc{
     width: 60vw;
-    margin-left: 30vw;
+    margin-left: 32vw;
     text-align: justify;
     margin-top: 18vh;
     position: absolute;
@@ -80,4 +90,15 @@ body {
 .code-section{
     margin-top: 4vh;
     margin-bottom: 2vh;
+    padding: 2vw;
+    background-color: var(--shade);
+    border-radius: 10px;
+}
+@media screen and (max-width: 576px){
+    
+ .wrapper{
+     flex-direction: column;
+ }
+ 
+  
 }
