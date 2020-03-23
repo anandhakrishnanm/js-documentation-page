@@ -1,8 +1,16 @@
 const burger = document.querySelector('.burger');
 const navbar = document.getElementById('navbar');
 const links = document.querySelectorAll('.links');
-console.log(navbar);
 let mode=1;
+function is_mobile() {
+    var agents = ['android', 'webos', 'iphone', 'ipad', 'blackberry'];
+    for(i in agents) {
+        if(navigator.userAgent.match('/'+agents[i]+'/i')) {
+            return true;
+        }
+    }
+    return false;
+}
 const showMenu = () => {
      burger.addEventListener('click', () => {
          if(mode==1){
@@ -17,7 +25,7 @@ const showMenu = () => {
 }
 links.forEach(item => {
     item.addEventListener('click', () => {
-        if(screen.width < 700){
+        if(!is_mobile){
             navbar.style.height = '10vh';
             mode=1;
         }
