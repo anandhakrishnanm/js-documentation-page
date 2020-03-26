@@ -19,6 +19,7 @@
 body {
     font-family: 'Lora', serif;
     background: url('images/triangle-mosaic.png');
+    background-attachment: fixed;
 }
 .line{
     width: 40px;
