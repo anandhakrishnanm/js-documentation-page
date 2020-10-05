@@ -16,6 +16,9 @@
     --shade: rgb(114, 112, 112,0.2);
     --hoverBlue: rgb(12, 83, 141); 
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Lora', serif;
     background: url('images/triangle-mosaic.png');
